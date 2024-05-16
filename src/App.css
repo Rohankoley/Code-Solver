@@ -1,3 +1,18 @@
+.answer-box{
+  background-color: black; /* Background color */
+  color:green;
+      border: 1px solid #ccc; /* Border color */
+      border-radius: 5px; /* Rounded corners */
+      padding: 10px; /* Padding */
+      margin-top: 20px; /* Margin from the top */
+      
+      height: fit-content; /* Set height */
+      overflow: auto;
+        white-space: pre-wrap; /* Preserve line breaks */
+      text-align: start;
+}
+
+
 #root {
   overflow-y: hidden;
   max-width: 1280px;
@@ -40,4 +55,51 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 65px;
+  aspect-ratio: 1;
+  position: relative;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+  box-shadow: 0 0 0 3px inset brown;
+  animation: l4 2.5s infinite;
+}
+.loader:after {
+  animation-delay: -1.25s;
+}
+@keyframes l4 {
+  0% {
+    inset: 0 35px 35px 0;
+  }
+  12.5% {
+    inset: 0 35px 0 0;
+  }
+  25% {
+    inset: 35px 35px 0 0;
+  }
+  37.5% {
+    inset: 35px 0 0 0;
+  }
+  50% {
+    inset: 35px 0 0 35px;
+  }
+  62.5% {
+    inset: 0 0 0 35px;
+  }
+  75% {
+    inset: 0 0 35px 35px;
+  }
+  87.5% {
+    inset: 0 0 35px 0;
+  }
+  100% {
+    inset: 0 35px 35px 0;
+  }
 }
