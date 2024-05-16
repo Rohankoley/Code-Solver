@@ -81,7 +81,7 @@ function App() {
         </div>
       </div>
       {data ? (
-        <div className="answer-box text-2xl">{data}</div>
+        <div className=" bg-blue-800 text-white  border-2 border-solid border-blue-950 rounded-lg w-fit ">{data}</div>
       ) : (
         <div className="loader"></div>
       )}
