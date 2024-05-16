@@ -1,18 +1,17 @@
-
-    {
-        "manifest_version":3,
-        "version":"1.0.0",
-        "name":"Code Solver",
-        "action":{
-            "default_popup":"index.html"
-        },
-        "permissions":[
-            "scripting",
-            "tabs",
-            "activeTab"
-        ],
-        "host_permissions":[
-            "http://*/*",
-            "http://*/*"
-        ]
-    }
+{
+    "manifest_version":3,
+    "version":"1.0.0",
+    "name":"vite",
+    "action":{
+        "default_popup":"index.html"
+    },
+    "permissions":[
+        "scripting",
+        "tabs",
+        "activeTab"
+    ],
+    "host_permissions":[
+        "http://*/*",
+        "http://*/*"
+    ]
+}
