@@ -7,6 +7,7 @@ function App() {
   const [data, setData] = useState("");
   const [currentUrl, setCurrentUrl] = useState("");
 
+
   useEffect(() => {
     // Function to retrieve URL when component mounts or updates
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
@@ -28,9 +29,11 @@ function App() {
         const fetchData = `Give me an approach to solve this ${currentUrl}type of problem `;
         const result = await fetchApi(fetchData);
         setData(result);
+        
       } else {
         const result = await fetchApi(text);
         setData(result);
+
       }
     } catch (error) {
       console.log(error);
@@ -53,7 +56,7 @@ function App() {
         <div  className="relative w-[32rem]">
           <div className="relative w-full min-w-[200px] ">
             <textarea
-              value={text===""?{data=""?"Approach is generating...":null}:text}
+              value={text===""?`Generating Approach on this ${currentUrl} problem...`:text}
               onChange={(e) => setText(e.target.value)}
               rows="8"
               
