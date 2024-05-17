@@ -53,7 +53,7 @@ function App() {
         <div  className="relative w-[32rem]">
           <div className="relative w-full min-w-[200px] ">
             <textarea
-              value={text}
+              value={text===""?{data=""?"Approach is generating...":null}:text}
               onChange={(e) => setText(e.target.value)}
               rows="8"
               
